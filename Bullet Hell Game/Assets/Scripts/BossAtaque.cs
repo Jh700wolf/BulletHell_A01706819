@@ -30,7 +30,7 @@ public class BossAtaques : MonoBehaviour
         {
             if (timerCooldown < 0f)
             {
-                AtaquesBoss.DisparoDiagonales(transform.position, transform.up, settings);
+                AtaquesBoss.DisparoSenoCombo(transform.position, transform.up, settings);
                 timerCooldown += cooldownDisparo;
             }
         }

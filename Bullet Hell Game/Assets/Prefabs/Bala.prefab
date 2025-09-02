@@ -80,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.85660374, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -3442273424303929756, guid: 18251a141c2659f4ab33ca6de3d87e31, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,4 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e95dd983f65a74e87e308dfea4c498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BalaScript
+  frecuencia: 6
+  amplitud: 0.2
   Velocidad: {x: 10, y: 3}
+  senoidal: 0
+  cosenoidal: 0
+  corte: 0
+  dir: 0

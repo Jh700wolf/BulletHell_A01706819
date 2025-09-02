@@ -44,7 +44,7 @@ public class AtaquesBoss : MonoBehaviour
         }
     }
 
-    public static void DisparoDiagonales(Vector2 origen, Vector2 direccion, DisparoBossSettings config)
+    public static void DisparoSenoCombo(Vector2 origen, Vector2 direccion, DisparoBossSettings config)
     {
         float anguloDisparos = 360f / config.numBalasAtaqueA;
         for (int i = 0; i < config.numBalasAtaqueB; i++)

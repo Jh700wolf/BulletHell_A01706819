@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PoolBalasBoss
   prefabBala: {fileID: 6141343752411617222, guid: eebb4ff23d487c14a99d2c19e79df672, type: 3}
   numBalas: 5
+  prefabBala2: {fileID: 749253375120728811, guid: 72dbebab71ed01842ab16c55f70bd1cb, type: 3}
 --- !u!1 &351016543
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 994557456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.13, y: -1.82, z: 0}
+  m_LocalPosition: {x: 8.48, y: -4.16, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,7 +736,7 @@ Transform:
   m_GameObject: {fileID: 1226117982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 8.4, y: 3.4, z: 0}
+  m_LocalPosition: {x: 7.9, y: -0.39, z: 0}
   m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -814,9 +815,11 @@ MonoBehaviour:
   cooldownDisparo: 0.2
   settings:
     numBalasAtaqueA: 8
+    numBalasAtaqueB: 1
     velocidadBalasAtaqueA: 15
     cooldownBalasAtaqueA: 0.2
     velocidadBalasAtaqueB: 15
+  timerBossFases: 30
 --- !u!114 &1226117986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,10 +832,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4570d37bb2e5af40a0d6310a961df16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossMove
-  posXMax: 10
-  posXMin: -10
-  velocidadBoss: {x: 3, y: 0}
-  timerCooldownMovement: 10
+  posXMax: 8
+  posXMin: -8
+  velocidadBoss: {x: 5, y: 0}
+  velocidadBossRetro: {x: 0, y: 2}
+  timerCooldownMovement: 30
 --- !u!1 &1259389859
 GameObject:
   m_ObjectHideFlags: 0

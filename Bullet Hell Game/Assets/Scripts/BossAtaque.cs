@@ -22,7 +22,7 @@ public class BossAtaques : MonoBehaviour
         {
             if (timerCooldown < 0f)
             {
-                AtaquesBoss.DisparoCosenoidalDiagonales(transform.position, transform.up, settings);
+                AtaquesBoss.DisparoZig(transform.position, transform.up, settings);
                 timerCooldown += cooldownDisparo;
             }
         }

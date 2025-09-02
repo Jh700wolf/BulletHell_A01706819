@@ -26,7 +26,7 @@ public class PoolBalasBoss : MonoBehaviour
 
 
     // Lista con los objetos de balas
-    private List<BalaScript> poolBalaBoss = new List<BalaScript>();
+    public List<BalaScript> poolBalaBoss = new List<BalaScript>();
     private List<BalaScript2> poolBalaBoss2 = new List<BalaScript2>();
 
     private void Awake()

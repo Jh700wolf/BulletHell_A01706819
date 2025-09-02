@@ -40,7 +40,7 @@ public class BossMove : MonoBehaviour
         else
         {
 
-            transform.Rotate(0,0,velocidadBoss.x* Time.deltaTime*18/5);
+            transform.Rotate(0,0,velocidadBoss.x* Time.deltaTime*36/5);
         }
         timerCooldownMovement -= Time.deltaTime;
     }

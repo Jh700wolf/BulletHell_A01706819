@@ -6,13 +6,15 @@ public class BalaScript : MonoBehaviour
     // De esta forma evito que se crashee todo.
     private const float TIEMPO_DE_ESTADIA = 2F;
     private float tiempo = 0f;
-    private float frecuencia = 6f;
-    private float amplitud = 0.5f;
+    public float frecuencia = 6f;
+    public float amplitud = 0.5f;
 
     // Para determinar la velocidad de la bala
     public Vector2 Velocidad;
     public bool senoidal;
     public bool cosenoidal;
+    public bool corte;
+    public bool dir = false;
     
 
     // Metodo de Update con los cambios a la posicion de la bala
@@ -21,16 +23,43 @@ public class BalaScript : MonoBehaviour
     {
         if (senoidal == true)
         {
+            
             float nuevoX = transform.position.x + Mathf.Sin(tiempo * frecuencia) * amplitud; 
-            float nuevoY = transform.position.y + +Velocidad.y * Time.deltaTime;
+            float nuevoY = transform.position.y + Velocidad.y * Time.deltaTime;
             transform.position = new Vector3(nuevoX, nuevoY, transform.position.z);
         }
         // Genera el movimiento de la bala a la velocidad indicada.
         else if (cosenoidal == true)
         {
-            float nuevoX = transform.position.x + Mathf.Cos(tiempo * frecuencia) * amplitud;
-            float nuevoY = transform.position.y + +Velocidad.y * Time.deltaTime;
+            Quaternion q = Quaternion.Euler(0, 0, 50f);
+            transform.rotation = q * transform.rotation;
+            float nuevoX = transform.position.x + Velocidad.x * Time.deltaTime;
+            float nuevoY = transform.position.y + Mathf.Sin(tiempo * frecuencia) * -amplitud;
             transform.position = new Vector3(nuevoX, nuevoY, transform.position.z);
+        }
+        else if (corte == true)
+        {
+            if(transform.position.x < 10 && dir== false) 
+            {
+                float nuevoY = transform.position.y + Velocidad.y * 2 * Time.deltaTime;
+                float nuevoX = transform.position.x + 2 * Velocidad.x * Time.deltaTime;
+                transform.position = new Vector3(nuevoX, nuevoY, transform.position.z);
+            }
+            else if (transform.position.x >= 10 && dir == false)
+            {
+                dir = true;
+            }
+            else if (transform.position.x > 4 && dir == true)
+            {
+                float nuevoY = transform.position.y + Velocidad.y * 2 * Time.deltaTime;
+                float nuevoX = transform.position.x - (2 * Velocidad.x * Time.deltaTime);
+                transform.position = new Vector3(nuevoX, nuevoY, transform.position.z);
+            }
+            else
+            {
+                dir = false;
+            }
+            
         }
         else
         {
